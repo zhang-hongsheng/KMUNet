@@ -55,7 +55,7 @@ class My_Test_Transforms:
 
     def __call__(self, sample):
         image, label = sample['image'], sample['label']
-        image = self.transform(image)  # 应用变换
+        image = self.transform(image)  
         return {'image': image, 'label': label, 'filename': sample['filename']}
 
 
@@ -72,7 +72,6 @@ class BaseDataSets_ISIC(Dataset):
             ops_strong
         ), "For using CTAugment learned policies, provide both weak and strong batch augmentation policy"
 
-        # 加载数据集
         if self.split == "train":
             for filename in os.listdir(os.path.join(self._base_dir, 'train_images')):
                 if filename.endswith(('.jpg', '.png', '.jpeg')):
