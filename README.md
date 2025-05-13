@@ -1,4 +1,4 @@
-# KMUNet all code in KMUNet/code
+# KMUNet all code is in KMUNet/code
 torch: 2.3.1+cu118, 
 torchaudio: 2.3.1+cu118,
 torchvision: 0.18.1+cu118,
